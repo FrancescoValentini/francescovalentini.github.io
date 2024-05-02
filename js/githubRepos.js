@@ -56,8 +56,8 @@ function createRepositoryCard(repo) {
             <div class="card-body">
                 <h5 class="card-title">${repo.name}</h5>
                 <p class="card-text">${repo.description}</p>
-                <p class="card-languages">${repo.language ? '<b>Language:</b> ' + repo.language : '<b>Language:</b> none'}</p>
-                <p class="card-last-commit"><b>Last commit:</b> ${lastCommitDate}</p>
+                <p class="card-languages">${repo.language ? '<b>Linguaggio:</b> ' + repo.language : '<b>Language:</b> none'}</p>
+                <p class="card-last-commit"><b>Ultimo commit:</b> ${lastCommitDate}</p>
                 
             </div>
         </div>
