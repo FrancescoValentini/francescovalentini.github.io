@@ -1,0 +1,86 @@
+/*
+    Foglio di stile che gestisce la formattazione delle card utilizzate
+    per mostrare i progetti presenti su GitHub
+*/
+:root {
+    --navbar-color: #019592;
+    --background-color: #2A2A2E;
+    --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    --card-background-color: #373a6b; 
+    --card-text-color: #ffffff;
+    --card-hover-scale: 1; /* 1.006 */
+    --card-hover-color: #2b2a53;
+
+    --btn-color: #373a6b;
+    --btn-hover-color: #373a6b;
+    --btn-text-color: #ffffff;
+    --btn-text-hover-color: #ffffff;
+}
+
+.card {
+    height: 100%;
+    border-radius: 0;
+    border-color: var(--background-color);
+    box-shadow: var(--shadow);
+    overflow: hidden; /* Nasconde il testo che supera i limiti della card */
+}
+
+.card:hover {
+    transform: scale(var(--card-hover-scale));
+    background-color: var(--card-hover-color);
+}
+.card-body:hover {
+    transform: scale(var(--card-hover-scale));
+    background-color: var(--card-hover-color);
+}
+
+.card-body {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow);
+    background-color: var(--card-background-color);
+    cursor: pointer;
+}
+
+.card-title {
+    flex: 1;
+    color: var(--card-text-color);
+    font-weight: bold !important;
+}
+
+.card-languages, .card-last-commit {
+    flex: 1;
+    font-size: 0.9rem;
+    color: var(--card-text-color);
+}
+
+.card-text {
+    flex: 2;
+    color:var(--card-text-color);
+}
+
+.btn {
+    align-self: flex-end;
+    border-radius: 0;
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
+}
+.btn:hover {
+    background-color: var(--btn-hover-color);
+    color: var(--btn-text-hover-color);
+}
+
+.repository-card {
+    margin-bottom: 1rem;
+}
+
+/*
+    Dispositivi mobile
+*/
+@media (max-width: 668.98px) {
+    .card-title {
+        font-size: 16px; /* Assicurati di specificare il valore di font-size con "px" */
+    }
+}
